@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebStart</name>
+    </assembly>
+    <members>
+        <member name="T:WebStart.WebStartHttpModule">
+            <summary>
+            Http module that handles bootstrap config tasks
+            </summary>
+        </member>
+        <member name="M:WebStart.WebStartHttpModule.Init(System.Web.HttpApplication)">
+            <summary>
+            Runs all bootstrap config tasks
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:WebStart.WebStartHttpModule.Dispose">
+            <summary>
+            Dispose method
+            </summary>
+        </member>
+        <member name="P:WebStart.WebStartHttpModule.ConfigTasks">
+            <summary>
+            Setting up configuration tasks
+            </summary>
+        </member>
+        <member name="T:WebStart.Config">
+            <summary>
+            Abstract class for WebStart bootstrapper config task
+            </summary>
+        </member>
+        <member name="M:WebStart.Config.Setup">
+            <summary>
+            Performs config task in order to set up application (code being run once per application domain)
+            </summary>
+        </member>
+        <member name="M:WebStart.Config.AttachEventHandlers(System.Web.HttpApplication)">
+            <summary>
+            Allows to attach event handlers for an HttpApplication (code being run once per HttpApplication instance)
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:WebStart.Config.Shutdown">
+            <summary>
+            Performs config task when applicaiton is being shutdown
+            </summary>
+        </member>
+        <member name="P:WebStart.Config.Priority">
+            <summary>
+            Priority of particular config
+            </summary>
+        </member>
+        <member name="T:WebStart.EPriority">
+            <summary>
+            Priority for bootstrapper config tasks - determines the order in which they will be run
+            </summary>
+        </member>
+        <member name="F:WebStart.EPriority.VeryLow">
+            <summary>
+            Very low
+            </summary>
+        </member>
+        <member name="F:WebStart.EPriority.Low">
+            <summary>
+            Low
+            </summary>
+        </member>
+        <member name="F:WebStart.EPriority.Normal">
+            <summary>
+            Normal
+            </summary>
+        </member>
+        <member name="F:WebStart.EPriority.High">
+            <summary>
+            High
+            </summary>
+        </member>
+        <member name="F:WebStart.EPriority.VeryHigh">
+            <summary>
+            Very high
+            </summary>
+        </member>
+    </members>
+</doc>
